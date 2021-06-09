@@ -1,12 +1,12 @@
-export function managePresents(state, action){
+export function managePresents(state = {numberOfPresents: 0}, action){
 
-  state = {
-    numberOfPresents: 0
-  }
+  // state = {
+  //   numberOfPresents: 0
+  // }
   
-  action = {
-    type: 'INCREASE'
-  }
+  // action = {
+  //   type: 'INCREASE'
+  // }
 
     switch (action.type) {
       case 'INCREASE':
@@ -17,5 +17,4 @@ export function managePresents(state, action){
       default:
         return state
     }
-
 }
