@@ -2,10 +2,11 @@ export function manageFriends(state = {friends: []}, action){
 
   switch(action.type) {
     case 'ADD_FRIEND':
-      // add a friend
+      return {...state, friends: [...state.friends, action.friend]}
     case 'REMOVE_FRIEND':
-      // remove a friend
+        const friendFilter = state.friends.filter(friend => friend.id !== action.id)
+      return {...state, friends: friendFilter}
     default:
-      // set default
+      return state
   }
 }
